@@ -11,37 +11,42 @@ import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
 
 function App() {
   return (
     <div className="App">
-      <UserGreeting />
+      <div className="App-header">
+        <NameList />
 
-      <ParentComponent/>
-      
-      <EventBind/>
+        <UserGreeting />
 
-      <FunctionClick />
-      <ClassClick />
+        <ParentComponent />
 
-      <Message />
-      <Counter />
-      
-      {/*functional*/}
-      <Greet name = "Mikee" heroName="M.">
-        <p>This is children property.</p>
-      </Greet>
-      <Greet name = "Robert" heroName="R.">
-        <button>Action</button>
-      </Greet>
-      <Greet name = "Kobe" heroName="K."/>
+        <EventBind />
 
-    {/*class*/}
-      <Welcome name="Mikee" heroName="M." /> 
-      <Welcome name = "Robert" heroName="R."/> 
-      <Welcome name = "Kobe" heroName="K." /> 
+        <FunctionClick />
+        <ClassClick />
 
-     {/* <Hello /> */}
+        <Message />
+        <Counter />
+
+        {/*functional*/}
+        <Greet name="Mikee" heroName="M.">
+          <p>This is children property.</p>
+        </Greet>
+        <Greet name="Robert" heroName="R.">
+          <button>Action</button>
+        </Greet>
+        <Greet name="Kobe" heroName="K." />
+
+        {/*class*/}
+        <Welcome name="Mikee" heroName="M." />
+        <Welcome name="Robert" heroName="R." />
+        <Welcome name="Kobe" heroName="K." />
+
+        {/* <Hello /> */}
+      </div>
     </div>
   );
 }
