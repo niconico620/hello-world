@@ -29,14 +29,27 @@ import FRParentInput from './components/FRParentInput';
 import PortalDemo from './components/PortalDemo';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
+import User from './components/User';
+import CounterRenderProp from './components/CounterRenderProp';
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
+        <CounterRenderProp render = {(count, incrementCount) => <ClickCounterTwo count={count} incrementCount={incrementCount}/> } />
+        <CounterRenderProp render = {(count, incrementCount) => <HoverCounterTwo count={count} incrementCount={incrementCount}/>} />
+        {/* <User render={(isLoggedIn) => isLoggedIn ? "Nico" : "Not Nico"} />
+        <HoverCounterTwo />
+        <ClickCounterTwo /> */}
 
-        
-       {/*  <ErrorBoundary>
+        <HoverCounter />
+        <ClickCounter name="HOY" />
+
+        {/*  <ErrorBoundary>
           <Hero heroName="Batman" />
         </ErrorBoundary>
         <ErrorBoundary>
